@@ -8,20 +8,49 @@ export const AboutPageTemplate = ({ title, content, contentComponent }) => {
   const PageContent = contentComponent || Content
 
   return (
-    <section className="section section--gradient">
-      <div className="container">
-        <div className="columns">
-          <div className="column is-10 is-offset-1">
-            <div className="section">
-              <h2 className="title is-size-3 has-text-weight-bold is-bold-light">
-                {title}
-              </h2>
-              <PageContent className="content" content={content} />
-            </div>
+      <div className="container-fluid">
+        <section className="page-section" id="team">
+          <div className="page-title col-lg-12 text-center">
+            <h1 id="about" className="page-heading text-uppercase">Über uns</h1>
           </div>
-        </div>
+          <div className="container content">
+            <div className="page-title col-lg-12 text-center">
+              <h2 className="page-heading text-uppercase">Unser Team</h2>
+            </div>
+
+            <div className="row text-center">
+              <div className="team-member">
+                <img src="img/mauro_webTIE.jpg" className="mx-auto rounded-circle"/>
+                <h4>Mauro Stehle</h4>
+
+                <p className="text-muted">Gründer und Entwickler</p>
+              </div>
+
+              <div className="team-member">
+                <img src="img/sven_webTIE.jpg" className="mx-auto rounded-circle"/>
+                <h4>Sven Humbel</h4>
+
+                <p className="text-muted">Gründer und Entwickler</p>
+              </div>
+            </div>
+
+            <div className="page-title col-lg-12 text-center">
+              <h2 className="page-heading text-uppercase">Gründung</h2>
+            </div>
+
+            <p className="text-muted">
+              webTIE wurde ursprünglich von den 2 Studenten Mauro und Sven der ABB Technikerschule, später der FHNW
+              Brugg-Windisch,
+              gegründet um gemeinsam private Anfragen für Webseitenprojekte umzusetzen. <br /> Mit den Weiterempfehlungen
+              unserer Kunden konnten wir ohne Werbung und Marketing diverse Kundenaufträge erfolgreich umsetzen. Durch
+              die wachsende Anzahl der zu verwaltenden und zu betreuenden Projekte, stiegen auch die Anforderungen und
+              wir investierten in Infrastruktur und intelligente Backuplösungen.<br /> Somit sind wir heute gut gerüstet
+                und
+                können umfassende Komplettlösungen anbieten, welche von der Erstellung einer Webapplikation, über das
+                Hosting der Applikation bis zu deren Wartung führt.</p>
+          </div>
+        </section>
       </div>
-    </section>
   )
 }
 

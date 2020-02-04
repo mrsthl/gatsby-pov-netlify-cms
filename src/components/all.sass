@@ -10,131 +10,196 @@ $primary-invert: $kaldi-red-invert
 $body-color: #333
 $black: #2b2523
 
-.navbar .navbar-menu
-  box-shadow:none !important
+/*
+ ** This is a manifest file that'll be compiled into application.css, which will include all the files
+ ** listed below.
+ **
+ ** Any CSS file within this directory can be referenced here using a relative path.
+ **
+ ** You're free to add application-wide styles to this file and they'll appear at the top of the
+ ** compiled file, but it's generally better to create a new file per style scope.
+ **
+ **= require bootstrap
+ **= require grails
+ **= require main
+ **= require mobile
+ **= require_self
 
-.content .taglist
-  list-style: none
-  margin-bottom: 0
-  margin-left: 0
-  margin-right: 1.5rem
-  margin-top: 1.5rem
-  display: flex
-  flex-wrap: wrap
-  justify-content: left
-  align-items: center
-  li
-    padding: 0 2rem 1rem 0
-    margin-bottom: 1.5rem
+/*Font
+
+body, input, select, textarea
+  font-family: "Open Sans", "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif
+
+/*Base Layout
+
+html
+  /*background-color: #ddd;
+  /*background-image: -moz-linear-gradient(center top, #aaa, #ddd);
+  /*background-image: -webkit-gradient(linear, left top, left bottom, color-stop(0, #aaa), color-stop(1, #ddd));
+  /*background-image: linear-gradient(to bottom, #aaa, #ddd);
+  /*filter: progid:DXImageTransform.Microsoft.gradient(startColorStr = '#aaaaaa', EndColorStr = '#dddddd');
+  /*background-repeat: no-repeat;
+  /*height: 100%;
+  /*!* change the box model to exclude the padding from the calculation of 100% height (IE8+) *!
+  /*-webkit-box-sizing: border-box;
+  /*-moz-box-sizing: border-box;
+  /*box-sizing: border-box;
+
+  &.no-cssgradients
+    background-color: #aaa
+
+  *
+    margin: 0
+
+a
+  &:hover, &:active
+    outline: none
+
+/* prevents outline in webkit on active links but retains it for tab focus
+
+/*Navbar
+
+.navbar-nav .nav-link
+  font-size: 1.1rem
+
+/*Body
+
+body
+  //background-color: #F5F5F5
+  color: #333333
+  overflow-x: hidden
+
+/* prevents box-shadow causing a horizontal scrollbar in firefox when viewport < 960px wide
+
+/*Titles
+
+h1
+  &.page-heading
+    font-size: 45px
     margin-top: 0
+    margin-bottom: 0
 
-// Helper Classes
-.full-width-image-container
-  width: 100vw
-  height: 400px
+  font-weight: 700
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'
+
+h2.page-heading
+  font-size: 30px
+  margin-top: 20px
+  margin-bottom: 30px
+
+h3.page-heading
+  font-size: 25px
+  margin-top: 10px
+  margin-bottom: 5px
+
+h1
+  font-weight: 500
+  font-family: Montserrat, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol', 'Noto Color Emoji'
+
+.page-section
+  padding-top: 50px
+
+.page-title, .content, .service-description
+  padding-top: 20px
+
+/*Content
+
+/*Quotes, inspired from https://bootsnipp.com/snippets/Bq909
+
+.quote-card
+  color: #222222
+  padding: 20px
+  padding-left: 50px
   position: relative
-  left: 50%
-  right: 50%
-  margin: 2em -50vw
-  background-size: cover
-  background-position: bottom
-  display: flex
-  justify-content: center
-  align-items: center
+  min-height: 120px
 
-.full-width-image
-    width: 100vw
-    height: 400px
-    background-size: cover
-    background-position: bottom
-    display: flex
-    justify-content: center
-    align-items: center
+  p
+    font-size: 22px
+    line-height: 1.5
+    margin: 0
+    max-width: 80%
 
-.btn
-    display: inline-block
-    padding: 12px 16px 10px
-    font-size: 18px
-    font-size: 1rem
-    line-height: 1.25
-    background-color: #fff
-    border-radius: .25rem
-    text-decoration: none
-    font-weight: 700
-    color: #CC3700
-    text-align: center
-    -webkit-box-shadow: inset 0 0 0 2px #CC3700
-    box-shadow: inset 0 0 0 2px #f40
-    -webkit-transition: all .15s ease
-    transition: all .15s ease
-
-.margin-top-0
-  margin-top: 0 !important
-
-.navbar-item .icon
-  color: $primary
-// Override for use of svg's from https://simpleicons.org/
-.icon svg
-  width: 1.5rem
-  height: 1.5rem
-  fill: currentColor
-.navbar-brand .navbar-item.logo
-  padding: 0 1rem
-footer.footer
-  padding: 3rem 0rem 0rem
-  background-color: transparent
-
-//Menu overrides
-$menu-item-color: $white-ter
-$menu-item-hover-color: $black !important
-$menu-item-hover-background-color: $black
-$menu-item-active-color: $kaldi-red-invert
-$menu-item-active-background-color:	$kaldi-red-invert
-$menu-list-border-left: 1px solid $kaldi-red-invert
-$menu-label-color: $white-ter
-
-
-.menu-label
-  font-size: 1em !important
-  text-align: left
-.menu-list
-  list-style: none !important
-  text-align: left
-.social
-  padding: 2em
-.social a
-    padding: .5em .5em .3em .5em
-    border-radius: 1em
-    background-color: $white-ter
-    margin: .5em
-    width: 1em
-    height: 1em
-    vertical-align: middle
-    display: inline
-
-// blog roll
-.blog-list-item.is-featured
-  background-color: #d6400033;
-.blog-list-item header
-  display: flex;
-  margin-bottom: 1em;
-.blog-list-item .featured-thumbnail
-  flex-basis: 35%;
-  margin: 0 1.5em 0 0;
-
-
-@import "~bulma"
-
-
-// responsiveness
-+tablet-only
-  .blog-list-item .featured-thumbnail
-    flex-basis: 50%;
-
-+mobile
-  .blog-list-item header
+  cite
+    font-size: 16px
+    margin-top: 10px
     display: block
-  .blog-list-item .featured-thumbnail
-    text-align: center;
-    max-width: 70%;
-    margin: 0 0 1em;
+    font-weight: 200
+    opacity: 0.8
+    max-width: 70%
+
+  &:before
+    font-family: Georgia, serif
+    content: "“"
+    position: absolute
+    top: 10px
+    left: 10px
+    font-size: 5em
+    color: rgba(238, 238, 238, 0.8)
+    font-weight: normal
+
+  &:after
+    font-family: Georgia, serif
+    content: "”"
+    position: absolute
+    bottom: -110px
+    line-height: 100px
+    right: -32px
+    font-size: 25em
+    color: rgba(238, 238, 238, 0.8)
+    font-weight: normal
+
+@media (max-width: 640px)
+  .quote-card:after
+    font-size: 22em
+    right: -25px
+
+/*Icons
+
+i.fa-circle
+  color: #45dffb !important
+
+@media (max-width: 767px)
+  .icons
+    margin-top: 20px
+
+/*TEAM
+/*Inspirations for styling from https://startbootstrap.com/
+
+.team-member
+  margin: auto
+
+  h4
+    margin-top: 25px
+    margin-bottom: 0
+    text-transform: none
+    font-size: 2rem
+    font-weight: 700
+    font-family: Montserrat,-apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,'Helvetica Neue',Arial,sans-serif,'Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol','Noto Color Emoji'
+
+  img
+    width: 225px
+    height: 225px
+    border: 7px solid rgba(0, 0, 0, 0.1)
+
+.ml-auto, .mx-auto
+  margin-left: auto !important
+
+.mr-auto, .mx-auto
+  margin-right: auto !important
+
+.rounded-circle
+  border-radius: 50% !important
+  width: 30%
+
+.text-muted
+  color: #6c757d !important
+  font-size: 1.1rem
+
+img
+  vertical-align: middle
+  border-style: none
+
+/*Contact
+
+#map
+  margin-top: 20px
