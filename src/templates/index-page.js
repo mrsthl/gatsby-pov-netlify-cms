@@ -46,7 +46,7 @@ IndexPageTemplate.propTypes = {
     title: PropTypes.string,
     quoteHeading: PropTypes.string,
     quoteText: PropTypes.string,
-}
+};
 
 const IndexPage = ({data}) => {
     const {frontmatter} = data.markdownRemark

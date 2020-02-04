@@ -47,9 +47,10 @@ export const AboutPageTemplate = ({title, subtitle: subTitle, content, contentCo
 
 AboutPageTemplate.propTypes = {
     title: PropTypes.string.isRequired,
+    subTitle: PropTypes.string.isRequired,
     content: PropTypes.string,
     contentComponent: PropTypes.func,
-}
+};
 
 const AboutPage = ({data}) => {
     const {markdownRemark: post} = data
@@ -60,14 +61,14 @@ const AboutPage = ({data}) => {
                 contentComponent={HTMLContent}
                 title={post.frontmatter.title}
                 content={post.html}
-            />
+                subTitle={post.frontmatter.subTitle}/>
         </Layout>
     )
-}
+};
 
 AboutPage.propTypes = {
     data: PropTypes.object.isRequired,
-}
+};
 
 export default AboutPage
 
@@ -81,4 +82,4 @@ export const aboutPageQuery = graphql`
       }   
     }
   }
-`
+`;
